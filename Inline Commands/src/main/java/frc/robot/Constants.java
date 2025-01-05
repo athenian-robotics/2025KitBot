@@ -4,6 +4,10 @@
 
 package frc.robot;
 
+import edu.wpi.first.units.measure.Current;
+import edu.wpi.first.units.measure.Voltage;
+import edu.wpi.first.units.*;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide
  * numerical or boolean
@@ -23,13 +27,13 @@ public final class Constants {
     public static final int RIGHT_LEADER_ID = 3;
     public static final int RIGHT_FOLLOWER_ID = 4;
 
-    public static final int DRIVE_MOTOR_CURRENT_LIMIT = 60;
+    public static final Current DRIVE_MOTOR_CURRENT_LIMIT = Units.Amps.of(60);
   }
 
   public static final class RollerConstants {
     public static final int ROLLER_MOTOR_ID = 5;
-    public static final int ROLLER_MOTOR_CURRENT_LIMIT = 60;
-    public static final double ROLLER_MOTOR_VOLTAGE_COMP = 10;
+    public static final Current ROLLER_MOTOR_CURRENT_LIMIT = Units.Amps.of(60);
+    public static final Voltage ROLLER_MOTOR_VOLTAGE_COMP = Units.Volts.of(10);
     public static final double ROLLER_EJECT_VALUE = 0.44;
   }
 
