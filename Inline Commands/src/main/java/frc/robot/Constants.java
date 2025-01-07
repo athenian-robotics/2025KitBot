@@ -38,7 +38,33 @@ public final class Constants {
   }
 
   public static final class OperatorConstants {
-    public static final int DRIVER_CONTROLLER_PORT = 0;
-    public static final int OPERATOR_CONTROLLER_PORT = 1;
+    public static final int THRUST_JOYSTICK_PORT = 0;
+    public static final int TURN_JOYSTICK_PORT = 1;
+    public static final int OPERATOR_JOYSTICK_PORT = 2;
+  }
+
+  public enum Button {
+    TRIGGER(1),
+    BOTTOM(2),
+    LEFT(3),
+    RIGHT(4),
+    LEFT_OUTSIDE_TOP(5),
+    LEFT_MIDDLE_TOP(6),
+    LEFT_INSIDE_TOP(7),
+    LEFT_INSIDE_BOTTOM(8),
+    LEFT_MIDDLE_BOTTOM(9),
+    LEFT_OUTSIDE_BOTTOM(10),
+    RIGHT_OUTSIDE_TOP(11),
+    RIGHT_MIDDLE_TOP(12),
+    RIGHT_INSIDE_TOP(13),
+    RIGHT_INSIDE_BOTTOM(14),
+    RIGHT_MIDDLE_BOTTOM(15),
+    RIGHT_OUTSIDE_BOTTOM(16);
+
+    public final int val;
+
+    Button(int i) {
+      val = i;
+    }
   }
 }
