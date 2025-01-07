@@ -83,7 +83,7 @@ public class RobotContainer {
     rollerSubsystem.setDefaultCommand(
         rollerSubsystem.runRoller(
             rollerSubsystem,
-            () -> operatorController.getY()));
+            () -> -operatorController.getY()));
   }
 
   /**
