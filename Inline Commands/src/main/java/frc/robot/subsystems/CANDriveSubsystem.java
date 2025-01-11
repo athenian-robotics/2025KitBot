@@ -46,6 +46,6 @@ public class CANDriveSubsystem extends SubsystemBase {
   // Command to drive the robot with transformations
   public Command driveCommand(CANDriveSubsystem driveSubsystem, DoubleSupplier xTranslation, DoubleSupplier yTranslation, DoubleSupplier zRotation) {
     return Commands.run(
-        () -> swerveDrive.drive (new Translation2d(xTranslation.getAsDouble(), yTranslation.getAsDouble()), zRotation.getAsDouble(), true, false));
+        () -> swerveDrive.drive (new Translation2d(xTranslation.getAsDouble(), yTranslation.getAsDouble()), zRotation.getAsDouble(), true, false), driveSubsystem);
   }
 }
