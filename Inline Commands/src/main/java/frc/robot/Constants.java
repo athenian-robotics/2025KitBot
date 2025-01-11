@@ -6,6 +6,10 @@ package frc.robot;
 
 import edu.wpi.first.units.measure.Current;
 import edu.wpi.first.units.measure.Voltage;
+import edu.wpi.first.wpilibj.Filesystem;
+
+import java.io.File;
+
 import edu.wpi.first.units.*;
 
 /**
@@ -22,10 +26,14 @@ import edu.wpi.first.units.*;
  */
 public final class Constants {
   public static final class DriveConstants {
+    public static final File SWERVE_CONFIG_DIR = new File(Filesystem.getDeployDirectory(), "swerve");
+
     public static final int LEFT_LEADER_ID = 1;
     public static final int LEFT_FOLLOWER_ID = 2;
     public static final int RIGHT_LEADER_ID = 3;
     public static final int RIGHT_FOLLOWER_ID = 4;
+
+    public static final double MAX_SPEED = 10;
 
     public static final Current DRIVE_MOTOR_CURRENT_LIMIT = Units.Amps.of(60);
   }
@@ -38,9 +46,18 @@ public final class Constants {
   }
 
   public static final class OperatorConstants {
-    public static final int THRUST_JOYSTICK_PORT = 0;
-    public static final int TURN_JOYSTICK_PORT = 1;
-    public static final int OPERATOR_JOYSTICK_PORT = 2;
+    public static final class DriveJoystick {
+      public static final int PORT = 0;
+      public static final double X_SENSITIVITY = 1;
+      public static final double Y_SENSITIVITY = 1;
+    }
+    public static final class TurnJoystick {
+      public static final int PORT = 1;
+      public static final double SENSITIVITY = 1;
+    }
+    public static final class OperatorJoystick {
+      public static final int PORT = 2;
+    }
   }
 
   public enum Button {
