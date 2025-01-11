@@ -34,8 +34,6 @@ public final class Constants {
     public static final int RIGHT_FOLLOWER_ID = 4;
 
     public static final double MAX_SPEED = 10;
-
-    public static final Current DRIVE_MOTOR_CURRENT_LIMIT = Units.Amps.of(60);
   }
 
   public static final class RollerConstants {
@@ -46,18 +44,9 @@ public final class Constants {
   }
 
   public static final class OperatorConstants {
-    public static final class DriveJoystick {
-      public static final int PORT = 0;
-      public static final double X_SENSITIVITY = 1;
-      public static final double Y_SENSITIVITY = 1;
-    }
-    public static final class TurnJoystick {
-      public static final int PORT = 1;
-      public static final double SENSITIVITY = 1;
-    }
-    public static final class OperatorJoystick {
-      public static final int PORT = 2;
-    }
+    public static final int DRIVE_JOYSTICK_PORT = 0;
+    public static final int TURN_JOYSTICK_PORT = 0;
+    public static final int OPERATOR_JOYSTICK_PORT = 0;
   }
 
   public enum Button {

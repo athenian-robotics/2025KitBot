@@ -28,11 +28,11 @@ public class RobotContainer {
   private final CANDriveSubsystem driveSubsystem = new CANDriveSubsystem();
   private final CANRollerSubsystem rollerSubsystem = new CANRollerSubsystem();
 
-  private final CommandJoystick driverDriveController = new CommandJoystick (Constants.OperatorConstants.DriveJoystick.PORT);
+  private final CommandJoystick driverDriveController = new CommandJoystick (Constants.OperatorConstants.DRIVE_JOYSTICK_PORT);
 
-  private final CommandJoystick driverTurnController = new CommandJoystick (Constants.OperatorConstants.TurnJoystick.PORT);
+  private final CommandJoystick driverTurnController = new CommandJoystick (Constants.OperatorConstants.TURN_JOYSTICK_PORT);
 
-  private final CommandJoystick operatorController = new CommandJoystick (Constants.OperatorConstants.OperatorJoystick.PORT);
+  private final CommandJoystick operatorController = new CommandJoystick (Constants.OperatorConstants.OPERATOR_JOYSTICK_PORT);
 
   // The autonomous chooser
   private final SendableChooser<Command> autoChooser = new SendableChooser<>();
