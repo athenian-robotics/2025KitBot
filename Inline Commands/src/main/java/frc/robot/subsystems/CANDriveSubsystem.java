@@ -31,20 +31,12 @@ public class CANDriveSubsystem extends SubsystemBase {
   private final SwerveDrive swerveDrive;
 
   public CANDriveSubsystem() {
-    // create brushed motors for drive
-    // leftLeader = new SparkMax(DriveConstants.LEFT_LEADER_ID, MotorType.kBrushed);
-    // leftFollower = new SparkMax(DriveConstants.LEFT_FOLLOWER_ID, MotorType.kBrushed);
-    // rightLeader = new SparkMax(DriveConstants.RIGHT_LEADER_ID, MotorType.kBrushed);
-    // rightFollower = new SparkMax(DriveConstants.RIGHT_FOLLOWER_ID, MotorType.kBrushed);
-    
     try {
       swerveDrive = new SwerveParser(Constants.DriveConstants.SWERVE_CONFIG_DIR).createSwerveDrive(Constants.DriveConstants.MAX_SPEED);
     } catch (Exception e) 
     {
       throw new RuntimeException(e);
     }
-
-    
   }
 
   @Override
