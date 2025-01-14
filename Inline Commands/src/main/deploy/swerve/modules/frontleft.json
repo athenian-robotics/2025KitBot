@@ -1,17 +1,17 @@
 {
     "drive": {
       "type": "falcon500",
-      "id": 1,
+      "id": 5,
       "canbus": null
     },
     "angle": {
       "type": "falcon500",
-      "id": 2,
+      "id": 6,
       "canbus": null
     },
     "encoder": {
       "type": "cancoder",
-      "id": 3,
+      "id": 1,
       "canbus": null
     },
     "inverted": {
