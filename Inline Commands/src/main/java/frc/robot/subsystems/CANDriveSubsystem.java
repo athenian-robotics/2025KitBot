@@ -26,11 +26,14 @@ import swervelib.math.SwerveMath;
 import swervelib.motors.TalonFXSwerve;
 import swervelib.parser.SwerveDriveConfiguration;
 import swervelib.parser.SwerveParser;
+import swervelib.telemetry.*;
+import swervelib.telemetry.SwerveDriveTelemetry.TelemetryVerbosity;
 
 public class CANDriveSubsystem extends SubsystemBase {
   private final SwerveDrive swerveDrive;
 
   public CANDriveSubsystem() {
+    SwerveDriveTelemetry.verbosity = TelemetryVerbosity.HIGH;
     try {
       swerveDrive = new SwerveParser(Constants.DriveConstants.SWERVE_CONFIG_DIR).createSwerveDrive(Constants.DriveConstants.MAX_SPEED);
     } catch (Exception e) 
