@@ -44,12 +44,12 @@ public class CANRollerSubsystem extends SubsystemBase {
   public void periodic() {
   }
 
-  // Command to run the roller with joystick inputs
-  public Command runRoller(
-      CANRollerSubsystem rollerSubsystem, DoubleSupplier forward, DoubleSupplier reverse) {
-    return Commands.run(
-        () -> rollerMotor.set(forward.getAsDouble() - reverse.getAsDouble()), rollerSubsystem);
-  }
+  // // Command to run the roller with joystick inputs
+  // public Command runRoller(
+  //     CANRollerSubsystem rollerSubsystem, DoubleSupplier forward, DoubleSupplier reverse) {
+  //   return Commands.run(
+  //       () -> rollerMotor.set(forward.getAsDouble() - reverse.getAsDouble()), rollerSubsystem);
+  // }
 
   public Command runRoller(
       CANRollerSubsystem rollerSubsystem, DoubleSupplier driveAmount) {

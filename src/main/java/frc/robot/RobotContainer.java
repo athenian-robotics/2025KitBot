@@ -64,10 +64,13 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-    // Set the A button to run the "runRoller" command from the factory with a fixed
+    // Set the operator trigger button to run the "runRoller" command from the factory with a fixed
     // value ejecting the gamepiece while the button is held
     operatorController.button(Constants.Button.TRIGGER.val)
-        .whileTrue(rollerSubsystem.runRoller(rollerSubsystem, () -> RollerConstants.ROLLER_EJECT_VALUE, () -> 0));
+        .whileTrue(rollerSubsystem.runRoller(rollerSubsystem, () -> RollerConstants.ROLLER_EJECT_VALUE));
+
+    operatorController.button(Constants.Button.TRIGGER.val)
+        .whileFalse(rollerSubsystem.runRoller(rollerSubsystem, () -> 0));
 
     // Set the default command for the drive subsystem to the command provided by
     // factory with the values provided by the joystick axes on the driver
@@ -80,10 +83,10 @@ public class RobotContainer {
 
     // Set the default command for the roller subsystem to the command from the
     // factory with the values provided by the triggers on the operator controller
-    rollerSubsystem.setDefaultCommand(
-        rollerSubsystem.runRoller(
-            rollerSubsystem,
-            () -> -operatorController.getY()));
+    // rollerSubsystem.setDefaultCommand(
+    //     rollerSubsystem.runRoller(
+    //         rollerSubsystem,
+    //         () -> -operatorController.getY()));
   }
 
   /**
