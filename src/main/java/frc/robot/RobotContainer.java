@@ -34,6 +34,8 @@ public class RobotContainer {
 
   private final CommandJoystick operatorController = new CommandJoystick (Constants.OperatorConstants.OPERATOR_JOYSTICK_PORT);
 
+  private final CommandXboxController xboxController = new CommandXboxController(Constants.OperatorConstants.XBOX_PORT);
+
   // The autonomous chooser
   private final SendableChooser<Command> autoChooser = new SendableChooser<>();
 
@@ -70,6 +72,12 @@ public class RobotContainer {
         .whileTrue(rollerSubsystem.runRoller(rollerSubsystem, () -> RollerConstants.ROLLER_EJECT_VALUE));
 
     operatorController.button(Constants.Button.TRIGGER.val)
+        .whileFalse(rollerSubsystem.runRoller(rollerSubsystem, () -> 0));
+
+    xboxController.a()
+        .whileTrue(rollerSubsystem.runRoller(rollerSubsystem, () -> RollerConstants.ROLLER_EJECT_VALUE));
+
+    xboxController.a()
         .whileFalse(rollerSubsystem.runRoller(rollerSubsystem, () -> 0));
 
     // Set the default command for the drive subsystem to the command provided by

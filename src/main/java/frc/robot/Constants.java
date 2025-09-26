@@ -34,13 +34,14 @@ public final class Constants {
     public static final int ROLLER_MOTOR_ID = 5;
     public static final Current ROLLER_MOTOR_CURRENT_LIMIT = Units.Amps.of(60);
     public static final Voltage ROLLER_MOTOR_VOLTAGE_COMP = Units.Volts.of(10);
-    public static final double ROLLER_EJECT_VALUE = 0.44;
+    public static final double ROLLER_EJECT_VALUE = 0.45;
   }
 
   public static final class OperatorConstants {
     public static final int THRUST_JOYSTICK_PORT = 0;
     public static final int TURN_JOYSTICK_PORT = 1;
     public static final int OPERATOR_JOYSTICK_PORT = 2;
+    public static final int XBOX_PORT = 0;
   }
 
   public enum Button {
