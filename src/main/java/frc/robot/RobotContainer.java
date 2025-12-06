@@ -79,7 +79,7 @@ public class RobotContainer {
     // value)
     driveSubsystem.setDefaultCommand(
         driveSubsystem.driveArcade(
-            driveSubsystem, () -> -driverThrustController.getY(), () -> -driverTurnController.getX()));
+            driveSubsystem, () -> -driverThrustController.getY() * (driverThrustController.getThrottle()+1)/2, () -> -driverThrustController.getTwist() * (driverThrustController.getThrottle()+1)/2));
 
     // Set the default command for the roller subsystem to the command from the
     // factory with the values provided by the triggers on the operator controller
